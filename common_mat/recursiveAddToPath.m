@@ -7,7 +7,7 @@ while ~isempty(queue)
     curDir = queue{1};
     queue(1) = [];
     
-    if ~isdir(curDir)
+    if ~isdir(curDir) || ~isempty(findstr('+', curDir))
         continue;
     end
     
